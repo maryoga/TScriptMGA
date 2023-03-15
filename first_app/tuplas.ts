@@ -13,3 +13,15 @@ let vehiculo = {
     color: ''
 };
 
+let tuplePlayers: [string, number, boolean] = ['Dominic', 3, true];
+
+let players: [number, string][];
+
+players = [
+    [1, 'Tony'],
+    [2, 'Thomas'],
+    [3, 'Larry'],
+];
+
+console.log(players);
+

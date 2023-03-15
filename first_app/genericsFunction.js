@@ -1,24 +1,23 @@
-var dataCollection = /** @class */ (function () {
-    function dataCollection() {
+class dataCollection {
+    constructor() {
         this.items = [];
     }
     //este metodo estamos obligados a implementarlo porque estamos implementando su interfase en la clase dataCollection
-    dataCollection.prototype.addItem = function (newItem) {
+    addItem(newItem) {
         this.items.push(newItem);
-    };
-    dataCollection.prototype.getItems = function () {
-        console.log("List of items", JSON.stringify(this.items));
-    };
-    dataCollection.prototype.getNames = function () {
-        return this.items.map(function (item) { return item.name; });
-    };
-    dataCollection.prototype.getitemById = function (id) {
-        return this.items.find(function (item) { return item.id === id; });
-    };
-    return dataCollection;
-}());
-var productCollection = new dataCollection();
-var newData2 = {
+    }
+    getItems() {
+        console.log(`List of items`, JSON.stringify(this.items));
+    }
+    getNames() {
+        return this.items.map((item) => item.name);
+    }
+    getitemById(id) {
+        return this.items.find((item) => item.id === id);
+    }
+}
+const productCollection = new dataCollection();
+const newData2 = {
     id: 2,
     name: 'beer',
     price: 333
